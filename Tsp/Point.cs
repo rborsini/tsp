@@ -18,5 +18,17 @@ namespace Tsp
         public PointType Type;
         public double X;
         public double Y;
+        public string Name;
+
+        public double GetDistance(Point p)
+        {
+            return GetDistance(this, p);
+        }
+
+        public static double GetDistance(Point origin, Point destination)
+        {
+            return Math.Sqrt(Math.Pow(destination.X - origin.X, 2) + Math.Pow(destination.Y - origin.Y, 2));
+        }
+
     }
 }

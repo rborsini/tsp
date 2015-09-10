@@ -32,6 +32,8 @@ namespace TspSolverWindowsForm
             for(int i = 0; i < Convert.ToInt32(this.numericUpDown.Value); i++)
             {
                 Tsp.Point point = new Tsp.Point();
+
+                point.Name = (i + 1).ToString();
                 point.X = Convert.ToInt32(r.NextDouble() * 500);
                 point.Y = Convert.ToInt32(r.NextDouble() * 500);
 
@@ -45,6 +47,7 @@ namespace TspSolverWindowsForm
             Tsp.Point point = new Tsp.Point();
             MouseEventArgs arg = (MouseEventArgs)e;
 
+            point.Name = (this.points.Count + 1).ToString();
             point.X = Convert.ToInt32(arg.X);
             point.Y = Convert.ToInt32(arg.Y);
 
@@ -80,6 +83,7 @@ namespace TspSolverWindowsForm
         private void Clear()
         {
             this.points.Clear();
+            this.lblResult.Text = "";
             this.formGraphics.Clear(System.Drawing.Color.White);
         }
 
@@ -95,6 +99,8 @@ namespace TspSolverWindowsForm
         {
             this.formGraphics.Clear(System.Drawing.Color.White);
             Route route = new Engine().Solve(this.points);
+
+            this.lblResult.Text = route.Result;
 
             for (int i = 0; i < route.Points.Count - 1; i++)
             {

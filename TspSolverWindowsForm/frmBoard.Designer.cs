@@ -34,6 +34,7 @@
             this.btnShowRoute = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSolve = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,11 +100,20 @@
             this.btnSolve.UseVisualStyleBackColor = true;
             this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
             // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(13, 519);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.TabIndex = 7;
+            // 
             // frmBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 524);
+            this.ClientSize = new System.Drawing.Size(693, 541);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnSolve);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnShowRoute);
@@ -114,6 +124,7 @@
             this.Text = "TspSolver";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,6 +136,7 @@
         private System.Windows.Forms.Button btnShowRoute;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSolve;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
