@@ -35,6 +35,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSolve = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
+            this.btnSolve2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,11 +109,22 @@
             this.lblResult.Size = new System.Drawing.Size(0, 13);
             this.lblResult.TabIndex = 7;
             // 
+            // btnSolve2
+            // 
+            this.btnSolve2.Location = new System.Drawing.Point(606, 156);
+            this.btnSolve2.Name = "btnSolve2";
+            this.btnSolve2.Size = new System.Drawing.Size(75, 23);
+            this.btnSolve2.TabIndex = 8;
+            this.btnSolve2.Text = "Solve";
+            this.btnSolve2.UseVisualStyleBackColor = true;
+            this.btnSolve2.Click += new System.EventHandler(this.btnSolve2_Click);
+            // 
             // frmBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 541);
+            this.Controls.Add(this.btnSolve2);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnSolve);
             this.Controls.Add(this.btnClear);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSolve;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnSolve2;
     }
 }
 

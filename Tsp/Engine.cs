@@ -38,7 +38,9 @@ namespace Tsp
             }
 
             route.Points.Add(this.endPoint);
-            route.Result = String.Join(" - ", route.Points.Select(p => p.Name));
+            route.Points = route.Points;
+            //route.Result = String.Join(" - ", route.Points.Select(p => p.Name)) + " " + route.Cost.ToString("#.0");
+            route.Result = "Cost: " + Convert.ToInt32(route.Cost).ToString();
 
             return route;
         }
@@ -61,12 +63,6 @@ namespace Tsp
             return nearPoint;
         }
 
-        private class Explorer
-        {
-
-
-
-        }
 
     }
 }

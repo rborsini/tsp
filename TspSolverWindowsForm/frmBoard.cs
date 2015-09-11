@@ -112,6 +112,22 @@ namespace TspSolverWindowsForm
 
         }
 
+        private void btnSolve2_Click(object sender, EventArgs e)
+        {
+            this.formGraphics.Clear(System.Drawing.Color.White);
+            Route route = new TwoOptEngine().Solve(this.points);
+
+            this.lblResult.Text = route.Result;
+
+            for (int i = 0; i < route.Points.Count - 1; i++)
+            {
+                DrawPoint(route.Points[i]);
+                DrawLine(route.Points[i], route.Points[i + 1]);
+            }
+
+            DrawPoint(route.Points[route.Points.Count - 1]);
+        }
+
         private void DrawPoint(Tsp.Point point)
         {
             System.Drawing.Pen myPen;
@@ -156,6 +172,8 @@ namespace TspSolverWindowsForm
 
             formGraphics.DrawLine(myPen, x1, y1, x2, y2);
         }
+
+
 
 
 
